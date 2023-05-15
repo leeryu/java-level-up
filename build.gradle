@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.leeeryu'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.leeeryu.thread.SyncExample'
+    }
+}
+
+dependencies {
+    implementation 'com.fasterxml:jackson-xml-databind:0.6.2'
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.90.Final'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
