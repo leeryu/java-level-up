@@ -19,8 +19,6 @@ public class GroupingObjectExample {
 						LinkedHashMap::new,
 						Collectors.mapping((person) -> person, Collectors.toList())));
 
-		final Set<String> strings = collect.keySet();
-
 		for (Map.Entry<String, List<Person>> entry : collect.entrySet()) {
 			System.out.println("key :" + entry.getKey() + " person: " + entry.getValue());
 		}
